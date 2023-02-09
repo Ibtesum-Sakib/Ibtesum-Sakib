@@ -10,7 +10,6 @@ An explorer and Computer Science graduate looking to expand his knowledge of the
 - 🤔 I’m looking for help with Quantum Computing stuff<br>
 - 💬 Ask me about NLP & Machine Learning.
 - 📫 How to reach me: ibtesum38@gmail.com
-- 👨‍💻 All of my projects are available at [Ibtesum Portfolio](https://ibtesum-sakib.github.io/)
 - ⚡ Fun fact: One of my favorite pastimes is reading books.  
 <br>
 
