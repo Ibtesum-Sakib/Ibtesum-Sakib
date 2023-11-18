@@ -4,7 +4,7 @@
 An explorer and Computer Science graduate looking to expand his knowledge of the computing field.
 <br>
 
-- 🔭 I’m currently working on Project Based Topics.
+- 🔭 I’m currently pursuing Master's degree in Data Science.
 - 🌱 I’m currently learning Statistics & Software Development.
 - 👯 I’m looking to collaborate on Data Science.
 - 🤔 I’m looking for help with Quantum Computing stuff<br>
