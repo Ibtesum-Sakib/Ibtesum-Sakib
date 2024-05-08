@@ -5,12 +5,12 @@ An explorer and Computer Science graduate looking to expand his knowledge of the
 <br>
 
 - 🔭 I’m currently pursuing a Master's degree in Data Science.
-- 🌱 I’m currently learning statistics and diving deeper into data science.
+- 🌱 I’m currently learning statistics, Power BI and diving deeper into data science.
 - 👯 I’m looking to collaborate on Data Science.
 - 🤔 I’m looking for help with advanced Probability theory stuff<br>
 - 💬 Ask me about NLP & Machine Learning.
 - 📫 How to reach me: ibtesum38@gmail.com
-- ⚡ Fun fact: One of my favorite pastimes is reading books.  
+- ⚡ Fun fact: One of my favorite pastimes is walking in nature.  
 <br>
 
 ## Profile's
