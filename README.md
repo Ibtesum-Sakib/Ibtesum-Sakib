@@ -1,5 +1,5 @@
 ## Hi there, 👋  I'm Mohammad Ibtesum Sakib
-### Python Dev | Data Scientist |  Machine Learning Enthusiastic | <!--DevOps -->
+### Python Dev | Data Enthusiastic |  Machine Learning Enthusiastic | <!--DevOps -->
 
 An explorer and Computer Science graduate looking to expand his knowledge of the computing field.
 <br>
