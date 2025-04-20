@@ -1,71 +1,42 @@
-name: Update Medium Posts with Images
+import requests
+import xml.etree.ElementTree as ET
 
-on:
-  schedule:
-    - cron: '0 * * * *'  # runs every hour
-  workflow_dispatch:
+# Fetch RSS feed
+feed_url = 'https://medium.com/feed/@ibtesum38'
+response = requests.get(feed_url)
+response.raise_for_status()  # Ensure we got a successful response
+tree = ET.ElementTree(ET.fromstring(response.content))
+root = tree.getroot()
 
-jobs:
-  update-readme:
-    name: Update README with latest Medium posts and images
-    runs-on: ubuntu-latest
+# Start building the new section for README
+readme_content = "## 📝 Latest Medium Posts\n\n"
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+# Extract titles, links, and images
+for item in root.findall(".//item"):
+    title = item.find("title").text if item.find("title") is not None else "No Title"
+    link = item.find("link").text if item.find("link") is not None else "No Link"
+    description = item.find("description").text if item.find("description") is not None else ""
+    
+    # Try to extract the image URL from the description
+    image_url = ""
+    if 'src="' in description:
+        image_url = description.split('src="')[1].split('"')[0]
 
-      - name: Fetch Latest Medium Posts and Update README
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install requests
-          
-          # Fetch latest Medium posts RSS feed
-          curl -o medium_feed.xml https://medium.com/feed/@ibtesum38
+    # Format the post title with image
+    if image_url:
+        readme_content += f"- [![{title}]({image_url})]({link})\n"
+    else:
+        readme_content += f"- [{title}]({link})\n"
 
-          # Python script to parse the RSS and update README
-          python3 <<EOF
-          import requests
-          import xml.etree.ElementTree as ET
+# Open README.md to update it
+with open("README.md", "r") as f:
+    readme_data = f.read()
 
-          # Parse RSS feed
-          tree = ET.parse('medium_feed.xml')
-          root = tree.getroot()
+# Replace the blog section
+readme_data = readme_data.split("<!-- BLOG-POST-LIST:START -->")[0] + \
+              "<!-- BLOG-POST-LIST:START -->\n" + readme_content + "<!-- BLOG-POST-LIST:END -->\n" + \
+              readme_data.split("<!-- BLOG-POST-LIST:END -->")[1:]
 
-          # Start building the new section for README
-          readme_content = "## 📝 Latest Medium Posts\n\n"
-
-          # Extract titles, links, and images
-          for item in root.findall(".//item"):
-              title = item.find("title").text
-              link = item.find("link").text
-              description = item.find("description").text
-              image_url = description.split('src="')[1].split('"')[0] if 'src="' in description else ""
-
-              # Format the post title with image
-              if image_url:
-                  readme_content += f"- [![{title}]({image_url})]({link})\n"
-              else:
-                  readme_content += f"- [{title}]({link})\n"
-
-          # Open README.md to update it
-          with open("README.md", "r") as f:
-              readme_data = f.read()
-
-          # Replace the blog section
-          readme_data = readme_data.split("<!-- BLOG-POST-LIST:START -->")[0] + \
-                        "<!-- BLOG-POST-LIST:START -->\n" + readme_content + "<!-- BLOG-POST-LIST:END -->\n" + \
-                        readme_data.split("<!-- BLOG-POST-LIST:END -->")[1:]
-
-          # Save the updated README
-          with open("README.md", "w") as f:
-              f.write(readme_data)
-          
-          EOF
-
-      - name: Commit and push updated README
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update Medium blog posts with featured images"
-          git push
+# Save the updated README
+with open("README.md", "w") as f:
+    f.write(readme_data)
