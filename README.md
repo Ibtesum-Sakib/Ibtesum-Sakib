@@ -15,7 +15,7 @@ A Data Science practitioner and Computer Science graduate looking to expand his 
 ## Profile's
  
 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/mohammad-ibtesum-sakib-40152a148/)
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg' alt='medium' height='40'>](@ibtesum38)
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg' alt='medium' height='40'>]([@ibtesum38](https://medium.com/@ibtesum38))
 <br>
 
 
