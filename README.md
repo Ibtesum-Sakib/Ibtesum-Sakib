@@ -42,8 +42,8 @@ A Data Science practitioner and Computer Science graduate looking to expand his 
 
 ## 📝 Latest Medium Posts
 
-- [![Post Title 1](https://example.com/image.jpg)](https://medium.com/@ibtesum38/post-title-1)
-- [![Post Title 2](https://example.com/image.jpg)](https://medium.com/@ibtesum38/post-title-2)
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 
 ### ⚙️ &nbsp;GitHub Analytics
