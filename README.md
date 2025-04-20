@@ -40,12 +40,10 @@ A Data Science practitioner and Computer Science graduate looking to expand his 
 <code><img height="50" src="https://www.vectorlogo.zone/logos/usepanda/usepanda-ar21.svg"></code>
 <code><img height="50" src="https://www.vectorlogo.zone/logos/r-project/r-project-icon.svg"></code>
 
-## ✍️ Latest Blog Posts
+## 📝 Latest Medium Posts
 
-I write about data, tech, and analytics on [Medium](https://medium.com/@ibtesum38). Check out my latest posts!
-
-- [Post Title 1](https://medium.com/@ibtesum38/can-a-bayesian-model-predict-who-smokes-6b27cebd00f9)
-- [Post Title 2](https://medium.com/@ibtesum38/can-ai-decode-silent-cries-for-help-transformers-vs-machine-learning-in-depression-detection-5e1573adf7c4)
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
 ### ⚙️ &nbsp;GitHub Analytics
 
