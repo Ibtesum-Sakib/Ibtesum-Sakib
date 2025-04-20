@@ -43,6 +43,8 @@ A Data Science practitioner and Computer Science graduate looking to expand his 
 ## 📝 Latest Medium Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Can a Bayesian Model Predict Who Smokes?](https://medium.com/@ibtesum38/can-a-bayesian-model-predict-who-smokes-6b27cebd00f9?source=rss-b629c90f7dfe------2)
+- [# Can AI Decode Silent Cries for Help? Transformers vs. Machine Learning in Depression Detection](https://medium.com/@ibtesum38/can-ai-decode-silent-cries-for-help-transformers-vs-machine-learning-in-depression-detection-5e1573adf7c4?source=rss-b629c90f7dfe------2)
 <!-- BLOG-POST-LIST:END -->
 
 ### ⚙️ &nbsp;GitHub Analytics
