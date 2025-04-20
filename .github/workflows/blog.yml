@@ -1,5 +1,4 @@
 name: Latest Medium blog posts
-
 on:
   schedule:
     - cron: '0 * * * *'  # runs every hour
@@ -9,49 +8,8 @@ jobs:
   update-readme:
     name: Update README with latest Medium posts
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
-      # Fetch blog posts using the pre-defined action
       - uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://medium.com/feed/@ibtesum38"
-
-      # Add a step to modify the README with custom style
-      - name: Style Blog Posts Section
-        run: |
-          # Read the fetched posts from the blog-post-workflow
-          posts_file="./latest_blog_posts.md"
-          
-          # Style it with custom layout (cards or any format you prefer)
-          styled_posts="## 📝 Latest Medium Posts\n\n"
-
-          while IFS= read -r line; do
-            if [[ $line == *"Post Title"* ]]; then
-              # Add custom style here, e.g., Card-style
-              post_title=$(echo $line | sed 's/^.*Post Title: //')
-              post_link=$(echo $line | sed 's/^.*Link: //')
-              styled_posts+=$'\n'"### [${post_title}](${post_link})"  # Custom title formatting
-            fi
-          done < "$posts_file"
-
-          # Additional customization: Add featured images (if available)
-          styled_posts+=$'\n\n' "Adding custom images here..."
-
-          # Replace the section in the README with the newly styled content
-          readme_file="README.md"
-          section_start="<!-- BLOG-POST-LIST:START -->"
-          section_end="<!-- BLOG-POST-LIST:END -->"
-
-          # Replace content between start and end markers in the README
-          sed -i "/$section_start/,/$section_end/c\\
-          $section_start\\n$styled_posts\\n$section_end" $readme_file
-
-      - name: Commit and push updated README
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update Medium blog posts with custom style"
-          git push
