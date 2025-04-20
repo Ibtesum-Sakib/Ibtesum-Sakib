@@ -19,13 +19,18 @@ jobs:
         with:
           feed_list: "https://medium.com/feed/@ibtesum38"
 
-      # Step 3: Debug: List the contents of the fetched post file to ensure it's correct
+      # Step 3: Debug: List files to check if latest_blog_posts.md is created
+      - name: Debug: List files
+        run: |
+          ls -alh
+
+      # Step 4: Debug: Display the contents of the fetched blog posts
       - name: Debug: List fetched posts
         run: |
           echo "Listing fetched posts:"
           cat ./latest_blog_posts.md
 
-      # Step 4: Add images to blog posts and update README
+      # Step 5: Add images to blog posts and update README
       - name: Add images to blog posts and update README
         run: |
           # Read the fetched posts from the file
@@ -66,7 +71,7 @@ jobs:
           sed -i "/$section_start/,/$section_end/c\\
           $section_start\\n$styled_posts\\n$section_end" $readme_file
 
-      # Step 5: Commit and push the updated README file
+      # Step 6: Commit and push the updated README file
       - name: Commit and push updated README
         run: |
           git config --global user.name "github-actions[bot]"
