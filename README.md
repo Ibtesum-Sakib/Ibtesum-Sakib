@@ -1,5 +1,5 @@
 ## Hi there, 👋  I'm Mohammad Ibtesum Sakib
-### Python Practitioner | Data Enthusiastic |  Machine Learning Enthusiastic | <!--DevOps -->
+### Data Analyst & Data Scientist | Python • SQL • Excel • Machine Learning • Power BI | MSc Data Science @ TU Dortmund
 
 A Data Science practitioner and Computer Science graduate looking to expand his knowledge of the "Data" field.
 <br>
@@ -9,7 +9,7 @@ A Data Science practitioner and Computer Science graduate looking to expand his 
 - 👯 I’m looking to collaborate on Data Science based projects.
 - 🤔 I’m looking for help with advanced Probability theory stuff<br>
 - 📫 How to reach me: ibtesum38@gmail.com
-- ⚡ Fun fact: One of my favorite pastimes is walking in nature.  
+- ⚡ Fun fact: I love finding stories in numbers—sometimes even tracking trends in my coffee consumption! :)
 <br>
 
 ## Profile's
